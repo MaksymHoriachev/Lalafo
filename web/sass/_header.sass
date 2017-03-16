@@ -1,0 +1,95 @@
+.header
+  position: relative
+  background-color: #fff
+  padding: 15px 0
+  z-index: 101
+  box-shadow: 0 0 50px rgba(0,0,0, 0.1)
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.header-column-left
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  .header-link
+    width: 104px
+    height: 22px
+    background: url("../img/Logo_lalafo.png") no-repeat
+  .header-language
+    position: relative
+    margin-left: 15px
+    padding-right: 15px
+    cursor: pointer
+    .language
+      font: 14px "Helvetica Neue"
+    .language-list
+      display: none
+      position: absolute
+      top: 22px
+      left: -5px
+      box-shadow: 0 0 4px rgba(0,0,0, 0.3)
+      background-color: #fff
+      border-radius: 3px
+      padding: 5px
+      font: 14px/14px "Helvetica Neue"
+      li
+        margin-bottom: 5px
+        &:last-child
+          margin-bottom: 0
+
+.header-column-right
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .header-btn
+    border: none
+    width: 160px
+    background-color: #54ba4a
+    color: #ffffff
+  .header-avatar
+    cursor: pointer
+    margin-right: 30px
+    .header-img
+      display: inline-block
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      background-color: #b4bfc5
+      vertical-align: middle
+    .header-name
+      position: relative
+      display: inline-block
+      margin-left: 10px
+      padding-right: 15px
+      font: 14px "Helvetica Neue"
+      vertical-align: middle
+  .header-mess
+    position: relative
+    background-color: #b4bfc5
+    border-radius: 4px
+    color: #ffffff
+    margin-right: 50px
+    padding: 4px 8px
+    min-width: 12px
+    min-height: 12px
+    font-size: 10px
+    line-height: 10px
+    &::before
+      position: absolute
+      content: ""
+      left: 50%
+      bottom: -5px
+      border-top: 5px solid #b4bfc5
+      border-left: 5px solid transparent
+
+
+
+
+
+    
+
+
+
+

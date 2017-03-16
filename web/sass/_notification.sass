@@ -1,0 +1,56 @@
+.notification-section
+  position: absolute
+  top: 70px
+  left: 0
+  right: 0
+  background-color: #fff
+  padding: 10px 0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.text-notification
+  font: 14px "Open Sans"
+  color: #fff
+
+.buttons-notification
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .btn-notification
+    font: bold 11px/10px "Open Sans"
+    margin-right: 25px
+    padding: 10px
+    width: 110px
+    color: #fff
+    border-color: #fff
+  .btn-notification-close
+    margin: 0
+    padding: 0
+    width: 14px
+    height: 14px
+    background: url('../img/VectorSmartObject2.png') no-repeat
+    border: none
+
+#notification-purple
+  background-color: #874db2
+  z-index: 91
+
+#notification-scarlet
+  background-color: #fba1a1
+  z-index: 90
+  .text-notification
+    position: relative
+    padding-left: 40px
+    &::before
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 16px
+      height: 16px
+      background: url('../img/VectorSmartObject.png') no-repeat
+
+
+
