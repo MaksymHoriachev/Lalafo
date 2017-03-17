@@ -1,0 +1,24 @@
+.navigation-section
+  position: relative
+  z-index: 80
+
+.navigation
+  background-color: #fff
+  border: 1px solid #dbdbdb
+  .navigation-list
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    .navigation-item
+      margin: 0 0 0 25px
+      .navigation-link
+        display: block
+        position: relative
+        padding: 25px 30px 30px 0
+        border-top: 5px solid transparent
+        &:hover
+          color: #5286b3
+      .navigation-link.active
+        border-top: 5px solid #5286b3
+        color: #5286b3
+        font-weight: bold

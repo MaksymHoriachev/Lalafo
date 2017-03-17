@@ -1,0 +1,124 @@
+.ads
+  position: relative
+  padding: 70px 0 20px 0
+  z-index: 81
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.statistic,
+.manager
+  padding: 15px 20px
+  background-color: #fff
+  border: 1px solid #dbdbdb
+
+.statistic
+  width: 395px
+  height: 75px
+  .statistic-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .statistic-total
+      flex-basis: 40%
+    .statistic-views
+      flex-basis: 35%
+    .statistic-contacts
+      flex-basis: 25%
+
+.statistic-count
+  color: #32414b
+  font-size: 20px
+  line-height: 20px
+  margin-bottom: 10px
+.statistic-caption
+  display: inline-block
+  color: #b4bfc5
+  font-size: 12px
+  line-height: 12px
+
+.manager
+  position: relative
+  width: 355px
+  height: 75px
+  cursor: pointer
+  &::before
+    right: 10px
+  .manager-icon
+    position: absolute
+    top: 15px
+    left: 20px
+    width: 50px
+    height: 50px
+    border: 2px solid #dfb945
+    background-color: #fff
+    border-radius: 50%
+    padding: 2px
+    img
+      border-radius: 50%
+  .manager-contacts
+    margin-left: 60px
+    .manager-title
+      font-weight: bold
+      padding-bottom: 10px
+
+.manager-viber,
+.manager-tel,
+.manager-mail,
+.manager-skype
+  position: relative
+  padding-left: 25px
+  &::before
+    position: absolute
+    content: ''
+    width: 13px
+    height: 13px
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+
+.manager-viber
+  &::before
+    content: url(../img/contact/Layer-vib.png)
+.manager-tel
+  &::before
+    content: url(../img/contact/tel.png)
+.manager-mail
+  &::before
+    content: url(../img/contact/Vector-mail.png)
+.manager-skype
+  &::before
+    content: url(../img/contact/skype.png)
+
+.manager-dropdown
+  display: none
+  position: absolute
+  top: 70px
+  left: -1px
+  width: 355px
+  padding: 0 20px 20px 20px
+  background-color: #fff
+  border: 1px solid #dbdbdb
+  border-top: none
+  .manager-dropdown-list
+    margin-left: 60px
+    li
+      padding-bottom: 20px
+  .manager-time
+    font-size: 12px
+    color: #b4bfc5
+    margin-left: 60px
+    .working-time
+      padding-right: 10px
+      text-transform: uppercase
+      color: #32414b
+
+.btn-ads
+  width: 220px
+  height: 73px
+  font-weight: bold
+  background-color: #5c96c3
+  border: none
+  color: #fff
+    

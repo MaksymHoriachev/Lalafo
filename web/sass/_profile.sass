@@ -1,0 +1,97 @@
+.profile-section
+  position: relative
+  z-index: 79
+  .container
+    background-color: #fff
+    border: 1px solid #dbdbdb
+    margin-top: -1px
+    padding-top: 35px
+
+.profile-section-title
+  text-align: center
+  font: bold 24px/24px "Open Sans"
+  color: #32404a
+  margin-bottom: 40px
+
+.profile-wrap
+  margin: 0 auto
+  width: 670px
+
+.profile-form
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  .form-photo
+    flex-basis: 100%
+    .form-photo-title
+      font-size: 13px
+      line-height: 15px
+      font-weight: bold
+      color: #32414b
+      margin-bottom: 10px
+    .form-field-img
+      position: relative
+      background-color: #f3f4f5
+      width: 100%
+      min-height: 110px
+      margin-bottom: 20px
+      &::before
+        position: absolute
+        content: url(../img/form-photo.png)
+        top: 40%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 60px
+        height: 60px
+      &::after
+        position: absolute
+        content: 'No cover uploaded'
+        top: 80%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .form-file
+      position: relative
+      float: left
+      overflow: hidden
+      font-size: 1em
+      width: 130px
+      height: 30px
+      cursor: pointer
+      button
+        background-color: transparent
+        color: #32404a
+        border: 1px solid #d1d5d7
+        border-radius: 4px
+        width: 130px
+        height: 30px
+        font-size: 10px
+        cursor: pointer
+        text-transform: uppercase
+      input[type=file]
+        position: absolute
+        overflow: hidden
+        top: 0
+        left: -20px
+        font-size: 0
+        width: 150px
+        height: 30px
+        opacity: 0
+        cursor: pointer
+        &:focus,
+        &:active
+          outline: none
+    .form-prompt
+      margin-left: 150px
+      margin-right: 30px
+      margin-bottom: 50px
+      font-size: 11px
+      line-height: 18px
+      color: #32404a
+
+
+
+
+
+
+
+

@@ -10,3 +10,8 @@ $('#btn-close-purple').on('click', function () {
 $('#btn-close-scarlet').on('click', function () {
     $('#notification-scarlet').fadeOut(0);
 });
+
+$('#manager').on('click', function () {
+    $('#dropdown').toggle();
+});
+
