@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Lalafo</title>
+
     <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
     <header class="header">
@@ -23,11 +26,15 @@
             </div>
             <div class="header-column-right">
                 <div class="header-mess">
-                    <span>message</span>
+                    <span>...</span>
                 </div>
-                <div class="header-avatar">
+                <div class="header-login" id="header-login">
                     <img src="img/Ellipse%201.png" alt="avatar" class="header-img">
-                    <span class="header-name arrow-down">Anton</span>
+                    <span id="header-name" class="header-name arrow-down">Anton</span>
+                    <ul class="header-list-login">
+                        <li>Login</li>
+                        <li>Sign up</li>
+                    </ul>
                 </div>
                 <button type="button" class="btn header-btn">SELL YOUR STUFF</button>
             </div>
@@ -128,31 +135,193 @@
                 <form action="" method="post">
                     <div class="profile-form">
                         <div class="form-photo">
-                            <h3 class="form-photo-title">Cower photo</h3>
+                            <h3 class="profile-title">Cower photo</h3>
                             <div class="form-field-img"></div>
                             <div class="form-file">
-                                <button type="button">upload the file</button>
-                                <input type="file">
+                                <button type="button" class="btn-upload">upload the file</button>
+                                <input type="file" class="input-upload">
                             </div>
                             <p class="form-prompt">
                                 Add a personal cover photo to the top of your profile.
                                 Cover photo should be 962x159 pixels and up to 4MB in size.
                             </p>
                         </div>
-                        <div class="">
-
+                        <div class="profile-contacts">
+                            <div class="profile-email">
+                                <h3 class="profile-title">E-mail</h3>
+                                <input type="email" name="email" placeholder="Add email">
+                            </div>
+                            <div class="profile-url">
+                                <h3 class="profile-title">Create a custom URL</h3>
+                                <input type="url" name="url-prefix" class="profile-url-prefix" value="Lalafo.kg /" readonly>
+                                <input type="url" name="url-name" class="profile-url-name" placeholder="YourNane">
+                            </div>
+                            <div class="profile-skype">
+                                <h3 class="profile-title">Skype</h3>
+                                <input type="email" name="skype" placeholder="Add Skype">
+                            </div>
+                            <div class="profile-site">
+                                <h3 class="profile-title">Site</h3>
+                                <input type="email"  name="website" placeholder="Add website">
+                            </div>
                         </div>
+                        <div class="profile-description">
+                            <h3 class="profile-title">Write a short description of your business</h3>
+                            <textarea name="description" placeholder="Your Description"></textarea>
+                        </div>
+                        <div class="profile-phones">
+                            <h3 class="profile-title">Your phones</h3>
+                            <h3 class="profile-title">Already activated with this phone number</h3>
+                            <div id="profile-phones" class="profile-phones-content">
+                                <div class="profile-phone">
+                                    <div class="profile-phone-number">
+                                        <select class="country-code" name="country-code1">
+                                            <option value="+380">+380</option>
+                                            <option value="+999">+999</option>
+                                        </select>
+                                        <div class="profile-number">
+                                            <span>+</span>
+                                            <input type="text" name="phone-1" class="phone-input">
+                                        </div>
+                                    </div>
+                                    <div class="profile-checkbox">
+                                        <input class="whatsapp" id="whatsapp1" type="checkbox" name="whatsapp1" checked>
+                                        <label class="label-whatsapp" for="whatsapp1">Whatsapp</label>
+                                        <input class="viber"  id="viber1" type="checkbox" name="viber1">
+                                        <label class="label-viber" for="viber1">Viber</label>
+                                    </div>
+                                    <button type="button" class="btn-profile-phone">Delete</button>
+                                </div>
+                                <div class="profile-phone">
+                                    <div class="profile-phone-number">
+                                        <select class="country-code" name="country-code2">
+                                            <option value="+380">+380</option>
+                                            <option value="+999">+999</option>
+                                        </select>
+                                        <div class="profile-number">
+                                            <span>+</span>
+                                            <input type="text" name="phone-2" class="phone-input">
+                                        </div>
+                                    </div>
+                                    <div class="profile-checkbox">
+                                        <input class="whatsapp" id="whatsapp2" type="checkbox" name="whatsapp2">
+                                        <label class="label-whatsapp" for="whatsapp2">Whatsapp</label>
+                                        <input class="viber" id="viber2" type="checkbox" name="viber2">
+                                        <label class="label-viber" for="viber2">Viber</label>
+                                    </div>
+                                    <button type="button" class="btn-profile-phone">Delete</button>
+                                </div>
+                            </div>
+                            <button type="button" id="add-number" class="btn-profile">Add phone number</button>
+                        </div>
+                        <div class="profile-time">
+                            <h3 class="profile-title">Время работы</h3>
+                            <div class="profile-time-content">
+                                <div class="profile-day-time">
+                                    <div class="profile-day arrow-down">
+                                        <p>Days of the week</p>
+                                        <div class="day-dropdown">
+                                            <input id="day-monday-1" type="checkbox" name="day-monday1" checked>
+                                            <label for="day-monday-1" >Monday</label>
+                                            <input id="day-tuesday-1" type="checkbox" name="day-tuesday1" checked>
+                                            <label for="day-tuesday-1" >Tuesday</label>
+                                            <input id="day-wednesday-1" type="checkbox" name="day-wednesday1" checked>
+                                            <label for="day-wednesday-1" >Wednesday</label>
+                                            <input id="day-thursday-1" type="checkbox" name="day-thursday1" checked>
+                                            <label for="day-thursday-1" >Thursday</label>
+                                            <input id="day-friday-1" type="checkbox" name="day-friday1" checked>
+                                            <label for="day-friday-1" >Friday</label>
+                                            <input id="day-saturday-1" type="checkbox" name="day-saturday1">
+                                            <label for="day-saturday-1" >Saturday</label>
+                                            <input id="day-sunday-1" type="checkbox" name="day-sunday1">
+                                            <label for="day-sunday-1" >Sunday</label>
+                                        </div>
+                                    </div>
+                                    <div class="profile-working-time arrow-down">
+                                        <p>Working time</p>
+                                        <div class="working-dropdown">
+                                            <input id="time-before-1" name="time-before" class="working-dropdown-time" type="text" placeholder="00:00">
+                                            <input id="time-after-1" name="time-after" class="working-dropdown-time" type="text"  placeholder="00:00">
+                                            <input id="day-off-1" name="day-off1" type="checkbox">
+                                            <label for="day-off-1" class="day-off">day off</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" id="add-day" class="btn-profile">Add day</button>
+                        </div>
+                        <div class="address">
+                            <h3 class="profile-title">Addres</h3>
+                            <div class="block-input">
+                                <input type="text" name="address" class="address-input" id="address-input" placeholder="Add your address">
+                                <div id="map" class="profile-map"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-buttons">
+                        <button type="reset" class="btn btn-cancel">cancel</button>
+                        <button type="submit" class="btn btn-save">save</button>
                     </div>
                 </form>
             </div>
-
         </div>
     </section>
-
-
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-top">
+                <nav>
+                    <ul class="footer-nav-list">
+                        <li>
+                            <a href="#">How to sell</a>
+                        </li>
+                        <li>
+                            <a href="#">User agreement</a>
+                        </li>
+                        <li>
+                            <a href="#">Paid features</a>
+                        </li>
+                        <li>
+                            <a href="#">Contacts</a>
+                        </li>
+                        <li>
+                            <a href="#">Mobile version</a>
+                        </li>
+                        <li>
+                            <a href="#">Advertising</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer-country">
+                    <p id="footer-btn" class="footer-country-title arrow-down">Serbia</p>
+                    <ul id="footer-btn-list" class="footer-country-list">
+                        <li><a href="#">Serbia</a></li>
+                        <li><a href="#">Serbiaaa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-content-bottom">
+                <div class="footer-logo">
+                    <a href="#"><img src="img/logo-footer.png" alt="logo"></a>
+                    <span>© 2016  all right reserved</span>
+                </div>
+                <div class="storage">
+                    <a href="#"><img src="img/gp.png" alt=""></a>
+                    <a href="#"><img src="img/ios.png" alt=""></a>
+                </div>
+                <ul class="footer-social">
+                    <li><a href="#" class="footer-fb">Facebook</a></li>
+                    <li><a href="#" class="footer-tw">Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <!-- scripts -->
+    <script src="js/map.main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOuFUylBJzQ0DZrqxP1nTtEF0-bu3dDk4&libraries=places&callback=initAutocomplete" async defer></script>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

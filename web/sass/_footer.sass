@@ -1,0 +1,113 @@
+.footer
+  padding: 30px 0 20px 0
+  background-color: #1f2124
+
+.footer-content-top
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 1px solid #353739
+  padding-bottom: 15px
+
+.footer-nav-list
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  li
+    margin-right: 40px
+    a
+      color: #fff
+      font: bold 13px "Open Sans"
+
+.footer-country
+  width: 155px
+  position: relative
+  .footer-country-title
+    position: relative
+    font: 13px/14px "Open Sans"
+    padding: 10px 0 10px 45px
+    width: 155px
+    color: #fff
+    border: 1px solid #353739
+    border-radius: 4px
+    cursor: pointer
+    &::before
+      right: 10px
+    &::after
+      position: absolute
+      content: url(../img/glob.png)
+      top: 50%
+      left: 10px
+      transform: translateY(-50%)
+  .footer-country-list
+    display: none
+    position: absolute
+    top: 35px
+    right: 0
+    background-color: #1f2124
+    font: 13px "Open Sans"
+    padding: 10px 15px 5px 10px
+    color: #fff
+    border: 1px solid #353739
+    z-index: 1
+    li
+      display: block
+      a
+        display: inline-block
+        position: relative
+        color: #fff
+        padding-left: 30px
+        margin-bottom: 5px
+        &::after
+          position: absolute
+          content: url(../img/glob.png)
+          top: 0
+          left: 5px
+
+.footer-content-bottom
+  padding: 15px 0 0 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.footer-logo
+  display: flex
+  align-items: center
+  a
+    margin-right: 25px
+  span
+    font: 11px "Open Sans"
+    color: #636466
+
+.storage
+  display: flex
+  align-items: center
+  a:first-child
+    margin-right: 15px
+
+.footer-social
+  display: flex
+  align-items: center
+
+.footer-tw,
+.footer-fb
+  position: relative
+  padding-left: 40px
+  margin-left: 40px
+  font: bold 13px "Open Sans"
+  text-decoration: underline
+  color: #636466
+  &::before
+    position: absolute
+    top: 3px
+    left: 0
+
+.footer-tw::before
+  content: url(../img/twitter.png)
+.footer-fb::before
+  content: url(../img/facebook.png)
+
+
+
+
+

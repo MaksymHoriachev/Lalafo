@@ -35,9 +35,9 @@
       padding: 5px
       font: 14px/14px "Helvetica Neue"
       li
-        margin-bottom: 5px
-        &:last-child
-          margin-bottom: 0
+        margin: 10px
+        &:hover
+          text-decoration: underline
 
 .header-column-right
   display: flex
@@ -48,7 +48,8 @@
     width: 160px
     background-color: #54ba4a
     color: #ffffff
-  .header-avatar
+  .header-login
+    position: relative
     cursor: pointer
     margin-right: 30px
     .header-img
@@ -65,6 +66,21 @@
       padding-right: 15px
       font: 14px "Helvetica Neue"
       vertical-align: middle
+    .header-list-login
+      position: absolute
+      display: none
+      top: 33px
+      right: 0
+      box-shadow: 0 0 4px rgba(0,0,0, 0.3)
+      background-color: #fff
+      border-radius: 3px
+      padding: 5px
+      font: 14px/14px "Helvetica Neue"
+      text-align: right
+      li
+        margin: 10px
+        &:hover
+          text-decoration: underline
   .header-mess
     position: relative
     background-color: #b4bfc5
