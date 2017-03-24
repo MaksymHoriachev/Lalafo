@@ -1,6 +1,6 @@
 .ads
   position: relative
-  padding: 70px 0 20px 0
+  padding: 20px 0
   z-index: 81
   .container
     display: flex
@@ -14,7 +14,7 @@
   border: 1px solid #dbdbdb
 
 .statistic
-  width: 395px
+  flex-basis: 40%
   height: 75px
   .statistic-list
     display: flex
@@ -23,9 +23,9 @@
     .statistic-total
       flex-basis: 40%
     .statistic-views
-      flex-basis: 35%
+      flex-basis: 30%
     .statistic-contacts
-      flex-basis: 25%
+      flex-basis: 20%
 
 .statistic-count
   color: #32414b
@@ -40,7 +40,7 @@
 
 .manager
   position: relative
-  width: 355px
+  flex-basis: 37%
   height: 75px
   cursor: pointer
   &::before
@@ -96,7 +96,7 @@
   position: absolute
   top: 70px
   left: -1px
-  width: 355px
+  right: -1px
   padding: 0 20px 20px 20px
   background-color: #fff
   border: 1px solid #dbdbdb
@@ -115,10 +115,12 @@
       color: #32414b
 
 .btn-ads
-  width: 220px
+  flex-basis: 22%
   height: 73px
   font-weight: bold
   background-color: #5c96c3
   border: none
   color: #fff
+  &:hover
+    background-color: #5c96e3
     

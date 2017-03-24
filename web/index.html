@@ -5,7 +5,6 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <title>Lalafo</title>
 
-    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.min.css">
 
@@ -14,7 +13,12 @@
     <header class="header">
         <div class="container">
             <div class="header-column-left">
-                <a href="index.html" class="header-link"></a>
+                <div class="header-logo">
+                    <a href="index.html" class="header-link">
+                        <img src="img/Logo_lalafo.png" alt="logo">
+                        <h1>Lalafo</h1>
+                    </a>
+                </div>
                 <div id="language" class="header-language">
                     <span class="language arrow-down">English</span>
                     <ul id="language-list" class="language-list">
@@ -158,11 +162,11 @@
                             </div>
                             <div class="profile-skype">
                                 <h3 class="profile-title">Skype</h3>
-                                <input type="email" name="skype" placeholder="Add Skype">
+                                <input type="text" name="skype" placeholder="Add Skype">
                             </div>
                             <div class="profile-site">
                                 <h3 class="profile-title">Site</h3>
-                                <input type="email"  name="website" placeholder="Add website">
+                                <input type="text"  name="website" placeholder="Add website">
                             </div>
                         </div>
                         <div class="profile-description">
@@ -171,7 +175,7 @@
                         </div>
                         <div class="profile-phones">
                             <h3 class="profile-title">Your phones</h3>
-                            <h3 class="profile-title">Already activated with this phone number</h3>
+                            <h3 class="profile-title profile-title-activated">Already activated with this phone number</h3>
                             <div id="profile-phones" class="profile-phones-content">
                                 <div class="profile-phone">
                                     <div class="profile-phone-number">
@@ -260,7 +264,7 @@
                     </div>
                     <div class="profile-buttons">
                         <button type="reset" class="btn btn-cancel">cancel</button>
-                        <button type="submit" class="btn btn-save">save</button>
+                        <button type="button" class="btn btn-save">save</button>
                     </div>
                 </form>
             </div>

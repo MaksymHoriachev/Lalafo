@@ -3,7 +3,8 @@ function initAutocomplete() {
         center: {lat: 49.430452, lng: 32.082771},
         zoom: 16,
         scrollwheel: false,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        fullscreenControl: true
     });
 
     // Create the search box and link it to the UI element.
@@ -62,3 +63,4 @@ function initAutocomplete() {
         map.fitBounds(bounds);
     });
 };
+
